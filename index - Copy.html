@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <img src="download.jpg" width="50px" height="50px">
+        <address align="right">
+            Email:demo@gmail.com<br>
+            Contact:72XXXXXXX2
+        </address>
+    </div>
+    <div class="topnav">
+        <a class="active" href="#home">LINK1</a>
+        <a href="#news">LINK2</a>
+        <a href="#contact">LINK3</a>
+        <a href="#about">LINK4</a>
+        <a href="#about">LINK5</a>
+      </div>
+
+
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="s0.jpg" style="width:100%">
+        
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="s2.jpg" style="width:100%">
+          
+          </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="s5.jpg" style="width:100%">
+         
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="s6.jpg" style="width:100%" >
+          
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        
+<div class="row">
+    <div class="column">
+      <img src="rr.jpg" alt="Snow" style="width:50%">
+      
+    </div>
+    <div class="column">
+      <img src="rr.jpg" alt="Forest" style="width:50%">
+    </div>
+    <div class="column">
+      <img src="rr.jpg" alt="Mountains" style="width:50%">
+    </div>
+  </div>
+  <div class="footer">
+    <p>footer</p>
+</div>
+
+  
+        
+      
+      
+      
+</body>
+</html>
